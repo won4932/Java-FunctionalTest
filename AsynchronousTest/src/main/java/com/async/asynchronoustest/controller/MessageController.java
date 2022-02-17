@@ -59,9 +59,6 @@ public class MessageController {
 					return null;
 				});
 
-			CompletableFuture<String> future1 = CompletableFuture.supplyAsync(() -> {
-				messageService.completableFuturePrint(i + " ");
-			});
 			// future.thenRun(() -> {
 			// 	System.out.println("Run Task");
 			// });
