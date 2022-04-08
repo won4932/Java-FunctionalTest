@@ -3,8 +3,14 @@ package com.async.asynchronoustest.service;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
+import org.springframework.stereotype.Service;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@Service
 public class FutureService {
-	void runTest() throws ExecutionException, InterruptedException {
+	public void runTest() throws ExecutionException, InterruptedException {
 		CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
 			System.out.println("Thread : " + Thread.currentThread().getName());
 		});
@@ -13,7 +19,7 @@ public class FutureService {
 		System.out.println("Thread : " + Thread.currentThread().getName());
 	}
 
-	void supplyTest() throws Exception {
+	public void supplyTest() throws Exception {
 		CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
 			return "Thread : " + Thread.currentThread().getName();
 		});
@@ -22,7 +28,7 @@ public class FutureService {
 		System.out.println("Thread : " + Thread.currentThread().getName());
 	}
 
-	void applyTest() {
+	public void applyTest() {
 		CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
 			return "Thread : " + Thread.currentThread().getName();
 		}).thenApply(s -> {
@@ -38,7 +44,7 @@ public class FutureService {
 		}
 	}
 
-	void acceptTest() throws Exception {
+	public void acceptTest() throws Exception {
 		CompletableFuture<Void> future = CompletableFuture.supplyAsync(() -> {
 			return "Accept Thread : " + Thread.currentThread().getName();
 		}).thenAccept(s -> {
@@ -47,4 +53,16 @@ public class FutureService {
 
 		future.get();
 	}
+
+	public void thenRunTest() throws Exception {
+		CompletableFuture<Void> future = CompletableFuture.supplyAsync(() -> {
+			return "Thread : " + Thread.currentThread().getName();
+		}).thenRun(() -> {
+			System.out.println("Thread : " + Thread.currentThread().getName());
+		});
+
+		future.get();
+	}
+
+
 }
