@@ -19,4 +19,6 @@ public class FutureService2 {
 			return message + " " + "Message!";
 		});
 	}
+
+
 }
