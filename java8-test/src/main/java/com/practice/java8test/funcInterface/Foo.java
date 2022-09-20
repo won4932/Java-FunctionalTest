@@ -1,4 +1,6 @@
 package com.practice.java8test.funcInterface;
 
-public interface FooInterface {
+@FunctionalInterface
+public interface Foo {
+	String method(String string);
 }
