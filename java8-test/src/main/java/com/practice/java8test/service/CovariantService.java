@@ -16,4 +16,16 @@ public class CovariantService {
 		System.out.println(myInts); // 정상
 	}
 
+	public Number sum(List<? extends Number> numbers) {
+		numbers.add(55);
+
+		long sum = 0;
+
+		for(Number num : numbers) {
+			sum += num;
+		}
+
+		return sum;
+	}
+
 }
