@@ -5,13 +5,11 @@
 - bootAdmin : springBootAdmin Server
 - java8-test : 
 - java11-test : 
-- loader-ver2
-- logs
--  ~~mongoTest : NoSQL 관련 db connection test~~ -> Java-FunctionalTest Repository 이전
+- mongoTest : NoSQL 관련 db test
 
 ## Environment
 - Language : java
-- Tool : Eclipse, Intellij
+- Tool : Intellij
 - Category : Project, Rest API
 
 ## 상세기능
