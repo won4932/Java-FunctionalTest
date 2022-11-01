@@ -38,8 +38,29 @@ public class WaterMarkService {
 		double textHeight = size.getHeight();
 
 		AffineTransform rotate45 = AffineTransform.getRotateInstance(Math.PI / 4d);
-		Shape rotated = rotate45.createTransformedShape(textShape);
+		Shape rotatedText = rotate45.createTransformedShape(textShape);
 
-		
+		// 4번 반복
+		g2d.setPaint(new GradientPaint(0, 0, new Color(1f, 1f, 1f, 0.08f)
+			, original.getWidth() / 2
+			,original.getHeight() / 2
+			, new Color(1f, 1f, 1f, 0.08f)));
+		g2d.setStroke(new BasicStroke(0.5f));
+
+		// 피타 고라스 + 5픽셀(y방향 스텝 조정)
+		double yStep = Math.sqrt(textWidth * textWidth / 2) + 200;
+
+		// 영상 렌더링 이상 텍스트
+		for(double x = -textHeight * 3; x < original.getWidth(); x += (textHeight * 3)) {
+			double y = -yStep;
+			for(; y < original.getHeight(); y+= yStep) {
+				g2d.draw(rotatedText);
+				g2d.fill(rotatedText);
+				g2d.translate(0, yStep);
+			}
+			g2d.translate(textHeight * 3, -(y + yStep));
+		}
+		File output = new File("C:\\Users\\USER\\Downloads");
+		ImageIO.write(original, "png", output);
 	}
 }
