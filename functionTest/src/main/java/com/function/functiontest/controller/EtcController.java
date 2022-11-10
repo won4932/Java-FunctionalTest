@@ -1,5 +1,7 @@
 package com.function.functiontest.controller;
 
+import java.text.ParseException;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +18,7 @@ public class EtcController {
 	private final DateService dateService;
 
 	@GetMapping("/etc/dateTest")
-	public void test() {
+	public void test() throws ParseException {
 		dateService.dateTimeTest();
 	}
 }

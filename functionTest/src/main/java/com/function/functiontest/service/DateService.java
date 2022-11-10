@@ -1,5 +1,6 @@
 package com.function.functiontest.service;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -11,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class DateService {
 
-	public void dateTimeTest() {
+	public void dateTimeTest() throws ParseException {
 		Date now = new Date();
 
 		Long LicenseExpirationValidTime = 3600 * 24 * 1000 * 180L;
@@ -20,11 +21,17 @@ public class DateService {
 
 		String str = "1668047712";
 
-		
+		Date temp = new Date((Long.parseLong(str) *1000));
+
+		long l = now.getTime() + LicenseExpirationValidTime;
+
+		// Date date = simpleDateFormat.parse(temp);
 
 		// Date temp = new Date(now.getTime() + LicenseExpirationValidTime);
 
-		// String time = simpleDateFormat.format(temp.toString());
+		String time = simpleDateFormat.format(temp);
+
+		System.out.println(l);
 
 		System.out.println(time);
 	}
