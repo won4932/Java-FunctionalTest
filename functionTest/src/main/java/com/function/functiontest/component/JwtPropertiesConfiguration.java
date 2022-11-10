@@ -5,16 +5,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class JwtPropertiesConfiguration {
-	public static long accessTokenValidTime;
-	public static long refreshTokenValidTime;
-
-	@Value("${jwt.accessTokenValidTime}")
-	public void setAccessTokenValidTime(long value) {
-		accessTokenValidTime = value;
-	}
-
-	@Value("${jwt.refreshTokenValidTime}")
-	public void setRefreshTokenValidTime(long value) {
-		refreshTokenValidTime = value;
-	}
+	// public static long accessTokenValidTime;
+	// public static long refreshTokenValidTime;
+	//
+	// @Value("${jwt.accessTokenValidTime}")
+	// public void setAccessTokenValidTime(long value) {
+	// 	accessTokenValidTime = value;
+	// }
+	//
+	// @Value("${jwt.refreshTokenValidTime}")
+	// public void setRefreshTokenValidTime(long value) {
+	// 	refreshTokenValidTime = value;
+	// }
 }
