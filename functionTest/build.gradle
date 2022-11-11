@@ -9,6 +9,10 @@ group = 'com.function'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+ext {
+    appVersion = '1.0.0'
+}
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
