@@ -21,4 +21,9 @@ public class EtcController {
 	public void test() throws ParseException {
 		dateService.dateTimeTest();
 	}
+
+	@GetMapping("/etc/versionTest")
+	public void test2() throws ParseException {
+		dateService.versionTest();
+	}
 }

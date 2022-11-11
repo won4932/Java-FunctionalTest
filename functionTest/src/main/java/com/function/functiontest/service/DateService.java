@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -11,6 +12,13 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class DateService {
+
+	@Value("${ext.appVersion}")
+	private String appVersion;
+
+	public void versionTest() {
+		System.out.println(appVersion);
+	}
 
 	public void dateTimeTest() throws ParseException {
 		Date now = new Date();
