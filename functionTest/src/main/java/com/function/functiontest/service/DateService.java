@@ -13,11 +13,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class DateService {
 
-	@Value("${ext.appVersion}")
-	private String appVersion;
 
 	public void versionTest() {
-		System.out.println(appVersion);
+		// System.out.println(appVersion);
 	}
 
 	public void dateTimeTest() throws ParseException {
