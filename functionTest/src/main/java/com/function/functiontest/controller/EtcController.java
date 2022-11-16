@@ -34,4 +34,9 @@ public class EtcController {
 	public void test3() throws ParseException {
 		etcService.pathTest();
 	}
+
+	@GetMapping("/etc/propertyTest")
+	public void test4() throws ParseException {
+		etcService.sysPropertiesTest();
+	}
 }
