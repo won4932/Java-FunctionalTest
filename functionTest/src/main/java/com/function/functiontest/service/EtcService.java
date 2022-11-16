@@ -1,6 +1,7 @@
 package com.function.functiontest.service;
 
 import java.io.File;
+import java.util.Properties;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
@@ -43,6 +44,12 @@ public class EtcService {
 	}
 
 	public void sysPropertiesTest() {
-		System.out.println("sysPropertiesTest : " + System.getProperties());
+		Properties prop = new Properties();
+		prop.setProperty("Test2", "test메세지2");
+
+		System.out.println(System.getProperty("Test"));
+
+
+		// System.out.println("sysPropertiesTest : " + System.getProperties());
 	}
 }
