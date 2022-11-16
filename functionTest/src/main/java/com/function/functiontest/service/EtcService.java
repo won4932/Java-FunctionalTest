@@ -41,4 +41,8 @@ public class EtcService {
 		System.out.println(System.getProperty("java.class.path"));
 		System.out.println(System.getProperty("user.dir"));
 	}
+
+	public void sysPropertiesTest() {
+		System.out.println("sysPropertiesTest : " + System.getProperties());
+	}
 }

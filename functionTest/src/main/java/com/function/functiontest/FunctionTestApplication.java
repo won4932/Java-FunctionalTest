@@ -7,6 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FunctionTestApplication {
 
 	public static void main(String[] args) {
+
+		System.setProperty("Test", "test메세지");
+		System.out.println(System.getProperties());
 		SpringApplication.run(FunctionTestApplication.class, args);
 	}
 
