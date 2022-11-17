@@ -8,7 +8,15 @@ class CalculatorTest {
 
 	@Test
 	void test1() {
+		Calculator calculator = new Calculator();
 
+		assertEquals(calculator.Multiply(8, 9), 72);
+	}
+
+	@Test
+	void test2() {
+		Calculator calculator = new Calculator();
+		assertEquals(calculator.Multiply(2, 3, 4), 20);
 	}
 
 }
