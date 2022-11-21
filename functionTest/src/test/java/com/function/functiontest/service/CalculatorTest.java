@@ -3,6 +3,7 @@ package com.function.functiontest.service;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.BDDMockito;
 
 class CalculatorTest {
 
@@ -11,6 +12,8 @@ class CalculatorTest {
 		Calculator calculator = new Calculator();
 
 		assertEquals(calculator.Multiply(8, 9), 72);
+
+		BDDMockito.given(mock)
 	}
 
 	@Test
