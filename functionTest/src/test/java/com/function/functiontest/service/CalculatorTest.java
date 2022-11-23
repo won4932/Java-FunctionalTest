@@ -13,7 +13,7 @@ class CalculatorTest {
 
 		assertEquals(calculator.Multiply(8, 9), 72);
 
-		BDDMockito.given(mock)
+		BDDMockito.given();
 	}
 
 	@Test
