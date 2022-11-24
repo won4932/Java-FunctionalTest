@@ -1,9 +1,13 @@
 package com.function.functiontest.domain;
 
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,5 +25,8 @@ public class MedicalDepartment {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	private String
+	private String name;
+
+	@OneToMany(fetch = FetchType.LAZY)
+	private List<Hospital> hospitalId;
 }
