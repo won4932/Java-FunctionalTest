@@ -1,10 +1,10 @@
-package com.function.functiontest.domain;
+package com.function.functiontest.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface MedicalDepartmentRepository extends JpaRepository<MedicalDepartment, Integer> {
+import com.function.functiontest.domain.MedicalDepartment;
 
-	void deleteById(Integer integer);
+@Repository
+public interface MedicalDepartmentRepository extends JpaRepository<MedicalDepartment, Long> {
 }
