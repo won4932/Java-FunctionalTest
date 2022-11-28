@@ -1,9 +1,11 @@
-package com.function.functiontest.domain;
+package com.function.functiontest.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.function.functiontest.domain.Hospital;
+
 @Repository
-public interface HospitalRepository extends JpaRepository<Hospital, Integer> {
+public interface HospitalRepository extends JpaRepository<Hospital, Long> {
 
 }
