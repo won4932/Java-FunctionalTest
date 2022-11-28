@@ -1,4 +1,4 @@
-package com.function.functiontest.repo;
+package com.function.functiontest.domain;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,12 +10,8 @@ import org.springframework.stereotype.Repository;
 
 import com.function.functiontest.domain.Docter;
 
-@Repository
 public interface DocterRepository extends JpaRepository<Docter, Long> {
 
-	// Optional<Docter> findByMedicalDepartmentId(int id);
-
-	@Query(value = "select b.id from Docter b")
-	List<Docter> findByHospitalId(Long id);
+	Optional<Docter> findByMedicalDepartment_Id(Long id);
 
 }

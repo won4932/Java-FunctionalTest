@@ -26,7 +26,7 @@ public class Hospital {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 
 	private String name;
 
@@ -35,8 +35,9 @@ public class Hospital {
 	private String address;
 
 	@OneToMany(mappedBy = "hospital")
-	private List<Docter> docters;
+	private List<Docter> docterList;
 
-	@OneToMany(mappedBy = "hospital", cascade = CascadeType.PERSIST, orphanRemoval = true)
-	private List<MedicalDepartment> medicalDepartments;
+	// @OneToMany(mappedBy = "hospital", cascade = CascadeType.PERSIST, orphanRemoval = true)
+	@OneToMany(mappedBy = "hospital")
+	private List<MedicalDepartment> medicalDepartmentList;
 }
