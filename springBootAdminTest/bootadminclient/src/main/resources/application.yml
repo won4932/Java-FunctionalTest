@@ -1,0 +1,18 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8000
+        # war 로 기동시 service-url 추가 해야줘됨.
+        instance:
+#          service-url: http://localhost:8000
+           name: Client Server
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#
+#server:
+#  port: 18001
