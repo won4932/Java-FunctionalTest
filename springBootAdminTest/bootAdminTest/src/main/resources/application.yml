@@ -1,0 +1,80 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8000
+        # war 로 기동시 service-url 추가 해야줘됨.
+        instance:
+          #          service-url: http://localhost:8000
+          name: Client Server
+#  datasource:
+#    url: jdbc:postgresql://localhost:10001/postgres
+#    username: postgres
+#    password: postgres
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+
+
+
+#db:
+#  driver: org.postgresql.Driver
+#  url: jdbc:postgresql://localhost:10001/postgres
+#  user: postgres
+#  password: postgres
+#
+#hibernate:
+#  hbm2ddl:
+#    auto: create
+#  diarect: org.hibernate.dialect.PostgreSQLDialect
+
+
+
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+
+server:
+  port: 8882
+
+
+
+## jmx 요소 중 health, info만 수집
+#management:
+#  endpoints:
+#    jmx:
+#      exposure:
+#        include: health,info
+#    # 환경 설정 정보 및 스프링 빈들을 제외하고 노출
+#    web:
+#      exposure:
+#        exclude: env,beans
+#      # 기본 base-path를 /actuator
+#      # /actuator/health, /actuator/info...
+#      base-path: /actuator
+#      # /health -> /healthcheck
+#      path-mapping:
+#        health: healthcheck
+
+management:
+  endpoint:
+    configprops:
+      enabled: true
+    beans:
+      enabled: true
+    health:
+      enabled: true
+    loggers:
+      enabled: true
+    # shutdown 엔드포인트는 기본이 비활성화
+    shutdown:
+      enabled: false
+    env:
+      enabled: true
+  # 모든 엔드포인트들을 전체 활성화시키거나 비활성화.
+  # 비어 있으면 각 엔드포인트 활성화 설정에 위임
+  endpoints:
+    enabled-by-default:

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+
+    <persistence-unit name="hello">
+        <class>com.client.bootadmintest.Entity.Account</class>
+<!--        <exclude-unlisted-classes>false</exclude-unlisted-classes>-->
+        <properties>
+<!--            <property name="hibernate.archive.autodetection" value="class, hbm"/>-->
+            <property name="hibernate.diarect" value="org.hibernate.dialect.PostgreSQL82Dialect" />
+            <!-- 스키마 자동 생성 -->
+            <!-- create : drop + create / 개발 초기 단계 / 테스트 -->
+            <!-- create-drop : drop + create + drop / 프로그램 종료시 삭제 / 자동화된 테스트 -->
+            <!-- update : 변경 사항만 수정 / 개발 초기 단계 / 테스트 서버 -->
+            <!-- validate : 변경 사항 발생시 경고를 남기고 실행하지 않음 / 테스트 서버 / 스테이징 또는 운영 단계 -->
+            <!-- none: 자동 생성기능을 사용하지 않을 때/유효하지 않은 값 입력시 / 위 4가지 옵션을 제외한 값 / 스테이징 또는
+                운영 단계 -->
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.10.60:10001/postgres" />
+            <property name="javax.persistence.jdbc.user" value="postgres" />
+            <property name="javax.persistence.jdbc.password" value="postgres" />
+        </properties>
+    </persistence-unit>
+</persistence>
