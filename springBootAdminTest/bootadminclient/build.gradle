@@ -1,0 +1,43 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.5'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'war'
+}
+
+group = 'com.verification'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.projectlombok:lombok'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+    implementation 'org.springframework:spring-jdbc:5.3.19'
+//    implementation 'org.springframework:spring-aspects'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    // https://mvnrepository.com/artifact/de.codecentric/spring-boot-admin-starter-client
+    implementation 'de.codecentric:spring-boot-admin-starter-client:2.3.1'
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator
+    implementation 'org.springframework.boot:spring-boot-starter-actuator:2.3.1.RELEASE'
+
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
