@@ -32,6 +32,6 @@ public class BDDTest {
 
 	@Test
 	void BDDMockitoTest() {
-		
+
 	}
 }
