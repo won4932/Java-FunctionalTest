@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.async'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.9'
+sourceCompatibility = '11.0'
 
 configurations {
     all {

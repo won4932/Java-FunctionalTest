@@ -17,6 +17,26 @@ public class FutureController {
 
 	@GetMapping("/run")
 	public void runTest() throws ExecutionException, InterruptedException {
-		futureService.runTest();
+		for(int i = 0; i<5; i++) futureService.runTest();
+	}
+
+	@GetMapping("/supply")
+	public void supplyTest() throws Exception {
+		for(int i = 0; i<5; i++) futureService.supplyTest();
+	}
+
+	@GetMapping("/thenApply")
+	public void thenApplyTest() throws Exception {
+		for(int i = 0; i<5; i++) futureService.applyTest();
+	}
+
+	@GetMapping("/thenAccpet")
+	public void thenAccpetTest() throws Exception {
+		for(int i = 0; i<5; i++) futureService.acceptTest();
+	}
+
+	@GetMapping("/thenRun")
+	public void thenRunTest() throws Exception {
+		for(int i = 0; i<5; i++) futureService.thenRunTest();
 	}
 }
