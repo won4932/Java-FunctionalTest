@@ -1,0 +1,38 @@
+#tutorial-main {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+#tutorial-main .title {
+    position: relative;
+}
+
+#tutorial-main .title > i {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-image: url("images/logo.svg")
+}
+
+#tutorial-main .title > span {
+    position: absolute;
+    font-size: 14px;
+    left: 30px;
+    top: 5px;
+}
+
+#tutorial-main .title > span.dark {
+    color: #888;
+}
+
+#tutorial-main .title > .group {
+    position: absolute;
+    left: 250px;
+    top: 0px;
+}
+
+#tutorial-main .copyright {
+    margin: 7px 0px;
+    color: #a9a9a9;
+}
