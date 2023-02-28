@@ -39,4 +39,10 @@ public class FutureController {
 	public void thenRunTest() throws Exception {
 		for(int i = 0; i<5; i++) futureService.thenRunTest();
 	}
+
+	@GetMapping("/litenTest")
+	public void litenTest() throws Exception {
+		futureService.listenTest();
+	}
 }
+

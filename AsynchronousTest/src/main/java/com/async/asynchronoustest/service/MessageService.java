@@ -79,4 +79,12 @@ public class MessageService {
 
 		return new AsyncResult<>("Complete Task : " + Thread.currentThread().getName()).completable();
 	}
+
+	@Async
+	public ListenableFuture<String> listenTest() throws Exception {
+		System.out.println("start");
+		Thread.sleep(3000);
+		System.out.println("end");
+		return new AsyncResult<>("hi");
+	}
 }

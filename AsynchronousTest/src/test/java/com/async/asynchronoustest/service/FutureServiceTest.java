@@ -7,6 +7,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.util.concurrent.ListenableFuture;
 
 class FutureServiceTest {
 
@@ -68,4 +69,17 @@ class FutureServiceTest {
 
 		future.get();
 	}
+
+	// @Test
+	// void futureTest() throws Exception {
+	// 	FutureService futureService = new FutureService();
+	//
+	// 	ListenableFuture<String> listenableFuture = null;
+	//
+	// 	for(int i = 0; i<3; i++) {
+	// 		// listenableFuture = futureService.listenTest();
+	// 	}
+	//
+	// 	listenableFuture.addCallback(System.out::println, e -> e.printStackTrace());
+	// }
 }

@@ -3,13 +3,20 @@ package com.async.asynchronoustest.service;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Service;
+import org.springframework.util.concurrent.ListenableFuture;
 
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 @Service
 public class FutureService {
+
+	@Autowired MessageService messageService;
+
 	public void runTest() throws ExecutionException, InterruptedException {
 		CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
 			System.out.println("Thread : " + Thread.currentThread().getName());
@@ -62,6 +69,21 @@ public class FutureService {
 		});
 
 		future.get();
+	}
+
+
+	@Async
+	public void listenTest() throws Exception {
+
+		ListenableFuture<String> listenableFuture = null;
+
+		for(int i =0; i<3; i++) {
+			listenableFuture = messageService.listenTest();
+
+		}
+
+		listenableFuture.addCallback(System.out::println, e -> e.printStackTrace());
+
 	}
 
 
