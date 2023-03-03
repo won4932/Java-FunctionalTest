@@ -33,7 +33,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 
 		if(role.contains("ROLE_ADMIN")) {
 			// response.sendRedirect("/admin");
-			response.sendRedirect("/admin-stomp");
+			response.sendRedirect("/admin");
 			return;
 		}
 
