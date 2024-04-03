@@ -1,4 +1,4 @@
 package com.practice.java8test.service;
 
-public class MySubscription implements Subsc{
+public class MySubscription{
 }

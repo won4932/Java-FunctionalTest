@@ -21,7 +21,7 @@ public class Java8TestApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(Java8TestApplication.class, args);
 
-		service.Controll();
+		// service.Controll();
 
 	}
 

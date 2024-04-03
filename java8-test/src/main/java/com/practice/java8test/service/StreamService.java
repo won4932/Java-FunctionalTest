@@ -34,5 +34,73 @@ public class StreamService {
 		System.out.println(result);
 	}
 
+	public void InternalFunction() {
+		String[] intList = {"testtest", "teestteest"};
+
+		String[] list = {"test", "tt", "tee", "ee"};
+
+		int answer = 0;
+
+		for(String s : intList) {
+			for(int i = 0; i < s.length()-2; i++) {
+
+				// boolean ck = true;
+				// for(int p = 0; p < list.length-1; p++) {
+				// 	// boolean ck = true;
+				// 	for(int j = 0; j < list[p].length()-1; j++) {
+				// 		if(s.charAt(i+j) != list[p].charAt(j)) {
+				//
+				// 			break;
+				// 		}
+				// 	} // pattern charAt
+				//
+				// 	if(p == list.length-1)
+				// } // pattern String
+
+			}
+		}
+
+
+
+		// for(String s : intList) {
+		// 	for(int j = 0; j < s.length()-1; j++) {
+		//
+		// 	}
+		// 	boolean ck = false;
+		// 	int i = 0;
+		// 	// for(int i = 0; i < s.length()-1; i++) {
+		// 	//
+		// 	// }
+		//
+		// 	for (int i = 0; i < 3; i++) {
+		//
+		// 		if(s.substring())
+		//
+		// 		if (i == list.length-1) ck = true;
+		// 	}
+		// 	if(ck) continue;
+		// 	answer +=1;
+		//
+		// }
+			// while (i < s.length()) {
+			// 	int index;
+			// 	if(s.length() - i < 4) {
+			// 		index = 4;
+			// 	}else {
+			// 		index = s.length()-1;
+			// 	}
+			//
+			// 	for(String l : list) {
+			// 		if(!s.substring(i, index).contains(l));
+			//
+			// 		if(i==3)
+			// 	}
+			//
+			// }
+			// if(ck)
+
+
+	}
+
 
 }
