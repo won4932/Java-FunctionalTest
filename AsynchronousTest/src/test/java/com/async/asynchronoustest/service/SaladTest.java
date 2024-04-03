@@ -19,4 +19,18 @@ public class SaladTest {
 		System.out.println(secDiffTime + " (msec)소요");
 	}
 
+	@Test
+	void test() {
+		try{
+			Thread.sleep(3000);
+		}catch (Exception e) {
+
+		}
+	}
+
+	@Test
+	void dirTest() {
+		System.out.println(System.getProperty("user.dir"));
+	}
+
 }
