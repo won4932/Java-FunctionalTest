@@ -12,9 +12,9 @@ public class ReservationEventApplication {
 		SpringApplication.run(ReservationEventApplication.class, args);
 	}
 
-	@Bean
-	public ServerEndpointExporter serverEndpointExporter() {
-		return new ServerEndpointExporter();
-	}
+	// @Bean
+	// public ServerEndpointExporter serverEndpointExporter() {
+	// 	return new ServerEndpointExporter();
+	// }
 
 }

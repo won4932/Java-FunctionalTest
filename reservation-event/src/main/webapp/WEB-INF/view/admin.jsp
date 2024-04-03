@@ -13,9 +13,9 @@ window.onload = function() {
     /**
      * 웹소켓 사용자 연결 성립하는 경우 호출
      */
-    // g_webSocket.onopen = function(message) {
-    //     addLineToChatBox("Server is connected.");
-    // };
+    g_webSocket.onopen = function(message) {
+        addLineToChatBox("Server is connected.");
+    };
 
 
     /**
